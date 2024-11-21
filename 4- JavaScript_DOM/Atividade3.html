@@ -1,0 +1,66 @@
+<!-- ATIVIDADE 3 SLIDE 13
+ 
+Crie um programa que possui: 3 caixas de texto que só aceitam números e tenha os rótulos ( label ): lado A, lado B e lado
+1 botão “calcular” Quando acionado o botão deve informar se o triângulo equilátero, isósceles ou escaleno.-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 3</title>
+</head>
+
+<body>
+
+    <h1>Atividade 3</h1>
+
+    <label for="ladoA">Lado A:</label>
+    <input type="number" id="ladoA" placeholder="Digite o Lado A">
+    <br>
+
+    <label for="ladoB">Lado B:</label>
+    <input type="number" id="ladoB" placeholder="Digite o Lado B">
+    <br>
+
+    <label for="ladoC">Lado C:</label>
+    <input type="number" id="ladoC" placeholder="Digite o Lado C">
+    <br>
+
+    <button onclick="classificarTriangulo()">Calcular</button>
+
+    <div id="resultado"></div>
+
+    <script>
+        function classificarTriangulo() {
+            // Captura os valores dos lados
+            const ladoA = parseFloat(document.getElementById('ladoA').value);
+            const ladoB = parseFloat(document.getElementById('ladoB').value);
+            const ladoC = parseFloat(document.getElementById('ladoC').value);
+
+            // Validação para garantir que todos os valores são números e maiores que zero
+            if (isNaN(ladoA) || isNaN(ladoB) || isNaN(ladoC) || ladoA <= 0 || ladoB <= 0 || ladoC <= 0) {
+                alert("Por favor, digite números válidos e maiores que zero.");
+                return;
+            }
+
+            // Verifica a condição de um triângulo
+            if (ladoA === ladoB && ladoB === ladoC) {
+                mostrarResultado("O triângulo é Equilátero.");
+            } else if (ladoA === ladoB || ladoB === ladoC || ladoA === ladoC) {
+                mostrarResultado("O triângulo é Isósceles.");
+            } else {
+                mostrarResultado("O triângulo é Escaleno.");
+            }
+        }
+
+        function mostrarResultado(mensagem) {
+            const resultadoDiv = document.getElementById('resultado');
+            resultadoDiv.innerHTML = mensagem;
+        }
+    </script>
+
+</body>
+
+</html>

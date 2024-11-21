@@ -1,0 +1,67 @@
+<!-- Exercício 4 SLIDE 13
+
+Criar um programa que possua campos para usuário e login em aplicação O visitante se depara com o formulário de login ou de criação de usuário
+Cria login ou acessa sua conta. Deve ser possível criar múltiplos usuários e, se fechada, a página não pode perder os registros de
+usuários armazenados. -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 4</title>
+</head>
+
+<body>
+
+    <h2>Atividade 4</h2>
+
+    <div id="formulario">
+        <label for="username">Usuário:</label>
+        <input type="text" id="username" placeholder="Digite o nome de usuário"><br>
+
+        <label for="password">Senha:</label>
+        <input type="password" id="password" placeholder="Digite a senha"><br>
+
+        <button onclick="criarOuLoginUsuario()">Entrar ou Criar Conta</button>
+    </div>
+
+    <div id="mensagem"></div>
+
+    <script>
+        // Função para verificar se o usuário existe e fazer login, ou criar um novo usuário
+        function criarOuLoginUsuario() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (username === "" || password === "") {
+                document.getElementById('mensagem').innerHTML = "Por favor, preencha os campos de usuário e senha.";
+                return;
+            }
+
+            // Recupera o banco de dados de usuários do LocalStorage (se existir)
+            let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+
+            // Verifica se o usuário já existe
+            const usuarioExistente = usuarios.find(usuario => usuario.username === username);
+
+            if (usuarioExistente) {
+                // Se o usuário existe, verifica a senha
+                if (usuarioExistente.password === password) {
+                    document.getElementById('mensagem').innerHTML = "Bem-vindo, " + username + "!";
+                } else {
+                    document.getElementById('mensagem').innerHTML = "Senha incorreta. Tente novamente.";
+                }
+            } else {
+                // Se o usuário não existe, cria um novo
+                usuarios.push({ username: username, password: password });
+                localStorage.setItem('usuarios', JSON.stringify(usuarios)); // Armazena no LocalStorage
+                document.getElementById('mensagem').innerHTML = "Conta criada com sucesso! Você pode fazer login agora.";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

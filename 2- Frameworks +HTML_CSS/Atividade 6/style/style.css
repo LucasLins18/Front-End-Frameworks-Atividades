@@ -1,0 +1,77 @@
+/* Estilos gerais para o corpo da página */
+body {
+    font-family: Arial, sans-serif; /* Define a fonte */
+    background-color: #f4f4f4; /* Cor de fundo */
+    color: purple; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para o título */
+h2 {
+    font-size: 24px; /* Tamanho da fonte */
+    font-weight: bold; /* Deixa o texto em negrito */
+    color: purple; /* Cor do título */
+    margin-top: 20px; /* Espaço acima do título */
+}
+
+/* Estilo para o formulário */
+form {
+    background-color: #fff; /* Cor de fundo do formulário */
+    padding: 20px; /* Espaçamento interno */
+    margin: 20px auto; /* Espaçamento externo e centralizado */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Efeito de sombra */
+    width: 80%; /* Largura do formulário */
+    max-width: 500px; /* Largura máxima */
+}
+
+/* Estilo para os rótulos (labels) */
+label {
+    font-size: 16px; /* Tamanho da fonte */
+    font-weight: bold; /* Texto em negrito */
+    display: block; /* Faz o label ocupar toda a linha */
+    margin-bottom: 8px; /* Espaço abaixo do label */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+/* Estilo para os campos de entrada (inputs) */
+input[type="text"],
+input[type="email"] {
+    width: 100%; /* Largura total */
+    padding: 10px; /* Espaçamento interno */
+    margin-bottom: 20px; /* Espaço abaixo do campo */
+    border: 2px solid #ccc; /* Cor da borda */
+    border-radius: 4px; /* Bordas arredondadas */
+    box-sizing: border-box; /* Inclui o padding na largura total */
+}
+
+/* Efeito de foco nos campos de entrada */
+input[type="text"]:focus,
+input[type="email"]:focus {
+    border-color: purple; /* Cor da borda ao focar */
+    box-shadow: 0px 0px 5px rgba(76, 175, 80, 0.5); /* Efeito de sombra ao focar */
+}
+
+/* Estilo para o botão de envio */
+input[type="submit"] {
+    background-color: purple; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    padding: 12px 20px; /* Espaçamento interno */
+    border: none; /* Remove a borda padrão */
+    border-radius: 4px; /* Bordas arredondadas */
+    cursor: pointer; /* Mostra o cursor de clique */
+    font-size: 16px; /* Tamanho da fonte */
+    transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+}
+
+/* Efeito ao passar o mouse sobre o botão */
+input[type="submit"]:hover {
+    background-color: rgb(212, 71, 177); /* Cor de fundo ao passar o mouse */
+}
+
+/* Espaçamento geral entre os elementos */
+br {
+    margin-bottom: 10px;
+}

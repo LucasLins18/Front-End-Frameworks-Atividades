@@ -1,0 +1,115 @@
+/* Estilo para o corpo da página */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-image: url("/4-\ JavaScript_DOM/calculadora/img/fundo calculadora.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: Arial, sans-serif;
+}
+
+/* Centralização da calculadora */
+#calculator {
+  background-color: #2c272b;
+  border-radius: 10px;
+  padding: 20px;
+  width: 320px;
+  box-shadow: 3px 3px 0px black;
+}
+
+/* Título da calculadora */
+#calculator-title {
+  text-align: center;
+  color: #848488;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+/* Estilo do visor de cálculos */
+#operations {
+  background-color: #848488;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+#operation-display {
+  color: #c8c4ca;
+  font-size: 16px;
+  text-align: right;
+  height: 20px;
+}
+
+#display {
+  width: 100%;
+  font-size: 28px;
+  text-align: right;
+  border: none;
+  background: none;
+  color: white;
+  outline: none;
+}
+
+/* Grid dos botões */
+#buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Cria quatro colunas */
+  gap: 10px;
+}
+
+/* Botões */
+button {
+  font-size: 20px;
+  border: none;
+  border-radius: 8px;
+  padding: 20px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Botões de número */
+.number {
+  background-color: black;
+}
+
+.number:hover {
+  background-color: #5a5a5a;
+}
+
+/* Botões de operadores */
+.operator-button {
+  background-color: #634b98;
+  grid-column: 4; /* Garante que os operadores fiquem na quarta coluna */
+}
+
+.operator-button:hover {
+  background-color: #6a1b9a;
+}
+
+/* Botões funcionais AC e DEL */
+.func-button {
+  background-color: #d32f2f;
+}
+
+.func-button:hover {
+  background-color: #b71c1c;
+}
+
+/* Botão de ponto ocupa duas colunas */
+#button-point {
+  grid-column: span 2;
+}
+
+/* Assinatura */
+#signature {
+  text-align: center;
+  font-size: 14px;
+  color: #ccc;
+  margin-top: 20px;
+  font-family: "Arial", sans-serif;
+}

@@ -1,0 +1,35 @@
+<!-- EXERCÍCIO 1 SLIDE 12
+ 
+Crie um programa que capture o valor de entrada e mostre automaticamente a tabuada desse número abaixo.-->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 1</title>
+</head>
+
+<body>
+
+    <h1>Atividade 1</h1>
+    <input type="number" id="numero" placeholder="Digite um número">
+    <button onclick="gerarTabuada()">Gerar</button>
+
+    <div id="tabuada"></div>
+
+    <script>
+        function gerarTabuada() {
+            const numero = document.getElementById('numero').value;
+            if (!numero) return; // Se o campo estiver vazio, não faz nada
+            let resultado = '';
+            for (let i = 1; i <= 10; i++) {
+                resultado += `${numero} x ${i} = ${numero * i}<br>`;
+            }
+            document.getElementById('tabuada').innerHTML = resultado;
+        }
+    </script>
+
+</body>
+
+</html>

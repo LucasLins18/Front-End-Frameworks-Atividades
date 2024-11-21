@@ -1,0 +1,142 @@
+<!-- ATIVIDADE 3 SLIDE 47:  
+ 
+Criar uma página que contenham os atributos e parâmetros
+
+1 -Definição dos atributos listados abaixo com  exemplos de códigos sendo utilizados. Action
+ 
+Autocomplete
+ 
+Enctype
+ 
+Method
+ 
+Novalidate
+ 
+Target
+
+2 - Definição de parâmetros para o <input> 
+ 
+3 - Definição dos parâmetros listados abaixo  com  exemplos de códigos sendo utilizados
+ 
+Autocomplete
+ 
+Autoocus ; (qual primeiro campo que estará
+ 
+Disabled
+Max
+Min
+ 
+Maxlength
+ 
+Name
+ 
+Pattern
+ 
+Placeholder
+ 
+Readonly
+ 
+Required
+ 
+Size
+ 
+Type
+ 
+Value -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 3</title>
+</head>
+
+<body>
+
+    <h1>Atividade 3</h1>
+
+    <!-- Formulário -->
+    <form action="processar_formulario.php" method="POST" enctype="multipart/form-data" novalidate autocomplete="on">
+
+        <!-- Nome -->
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+        <br><br>
+
+        <!-- Email -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+        <br><br>
+
+        <!-- Endereço -->
+        <label for="endereco">Endereço:</label>
+        <input type="text" id="endereco" name="endereco" placeholder="Digite seu endereço" required>
+        <br><br>
+
+        <!-- Curso -->
+        <label for="curso">Curso:</label>
+        <input type="text" id="curso" name="curso" placeholder="Digite seu curso" required>
+        <br><br>
+
+        <!-- Exemplo de atributos -->
+        <h2>Exemplos de Atributos e Parâmetros</h2>
+
+        <!-- Atributo autofocus -->
+        <label for="usuario">Usuário (campo inicial):</label>
+        <input type="text" id="usuario" name="usuario" autofocus placeholder="Digite seu usuário">
+        <br><br>
+
+        <!-- Atributo disabled -->
+        <label for="telefone">Telefone (desabilitado):</label>
+        <input type="tel" id="telefone" name="telefone" disabled placeholder="Não pode editar">
+        <br><br>
+
+        <!-- Atributo maxlength -->
+        <label for="senha">Senha (máximo de 8 caracteres):</label>
+        <input type="password" id="senha" name="senha" maxlength="8" placeholder="Máximo 8 caracteres">
+        <br><br>
+
+        <!-- Atributos min e max -->
+        <label for="idade">Idade:</label>
+        <input type="number" id="idade" name="idade" min="18" max="100" placeholder="Digite sua idade">
+        <br><br>
+
+        <!-- Atributo pattern (validação de formato) -->
+        <label for="cep">CEP (XXXXX-XXX):</label>
+        <input type="text" id="cep" name="cep" pattern="\d{5}-\d{3}" placeholder="XXXXX-XXX">
+        <br><br>
+
+        <!-- Atributo readonly -->
+        <label for="data">Data:</label>
+        <input type="text" id="data" name="data" value="2024-11-21" readonly>
+        <br><br>
+
+        <!-- Atributo required -->
+        <label for="comentarios">Comentários (obrigatório):</label>
+        <input type="text" id="comentarios" name="comentarios" required placeholder="Digite seus comentários">
+        <br><br>
+
+        <!-- Atributo size -->
+        <label for="cidade">Cidade:</label>
+        <input type="text" id="cidade" name="cidade" size="30" placeholder="Digite sua cidade">
+        <br><br>
+
+        <!-- Atributo type -->
+        <label for="email_input">Email (campo para email):</label>
+        <input type="email" id="email_input" name="email_input" placeholder="Digite seu email">
+        <br><br>
+
+        <!-- Atributo value -->
+        <label for="usuario_valor">Usuário padrão:</label>
+        <input type="text" id="usuario_valor" name="usuario_valor" value="Usuario_Exemplo" placeholder="Usuário padrão">
+        <br><br>
+
+        <!-- Botão de envio -->
+        <input type="submit" value="Enviar">
+    </form>
+
+</body>
+
+</html>

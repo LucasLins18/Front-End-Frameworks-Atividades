@@ -1,0 +1,57 @@
+<!-- EXERCÍCIO 2 SLIDE 12
+ 
+Faça um programa que “pegue” uma lista < ol > no HTML e coloque negrito dinamicamente a partir de um nome digitado no seu input. Por exemplo
+A sua tela possui uma lista de nomes:
+
+João
+Claudio
+Ana
+
+Usando um input você digita “João”, então o programa no mesmo momento deverá devolver o seguinte
+
+resultado:
+João
+Claudio
+Ana  -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 2</title>
+</head>
+
+<body>
+
+    <h1>Lista de Nomes</h1>
+    <input type="text" id="nomeInput" placeholder="Digite um nome" oninput="destacarNome()">
+    <ol id="listaNomes">
+        <li>João</li>
+        <li>Claudio</li>
+        <li>Ana</li>
+    </ol>
+
+    <script>
+        function destacarNome() {
+            // Captura o valor digitado no input
+            const nomeDigitado = document.getElementById('nomeInput').value.toLowerCase();
+
+            // Captura todos os itens da lista
+            const listaItens = document.querySelectorAll('#listaNomes li');
+
+            // Para cada item da lista, verifica se o nome corresponde ao digitado
+            listaItens.forEach(item => {
+                if (item.textContent.toLowerCase() === nomeDigitado) {
+                    item.style.fontWeight = 'bold';  // Coloca o nome em negrito
+                } else {
+                    item.style.fontWeight = 'normal'; // Remove o negrito de outros nomes
+                }
+            });
+        }
+    </script>
+
+</body>
+
+</html>

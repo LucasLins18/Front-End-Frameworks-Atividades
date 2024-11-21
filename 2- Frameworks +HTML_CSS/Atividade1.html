@@ -1,0 +1,40 @@
+<!-- ATIVIDADE 1 SLIDE 9
+ 
+Utilizando as notações RegEx crie um formulário com validação das seguintes situações:
+1)Número de celular
+2)CNPJ
+3)Email -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 1</title>
+</head>
+
+<body>
+    <h1>Atividade 1</h1>
+    <form action="#" method="post">
+        <!-- Validação para número de celular -->
+        <label for="celular">Número de Celular:</label><br>
+        <input type="text" id="celular" name="celular" placeholder="(XX) XXXXX-XXXX" pattern="\(\d{2}\) \d{5}-\d{4}"
+            required><br>
+        <small>Formato: (XX) XXXXX-XXXX</small><br><br>
+
+        <!-- Validação para CNPJ -->
+        <label for="cnpj">CNPJ:</label><br>
+        <input type="text" id="cnpj" name="cnpj" placeholder="XX.XXX.XXX/XXXX-XX"
+            pattern="\d{2}\.\d{3}\.\d{3}/\d{4}-\d{2}" required><br>
+        <small>Formato: XX.XXX.XXX/XXXX-XX</small><br><br>
+
+        <!-- Validação para email -->
+        <label for="email">E-mail:</label><br>
+        <input type="email" id="email" name="email" placeholder="exemplo@dominio.com" required><br><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+
+</html>
